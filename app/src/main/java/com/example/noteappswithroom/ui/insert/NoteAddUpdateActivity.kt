@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.noteappswithroom.R
 import com.example.noteappswithroom.database.Note
 import com.example.noteappswithroom.databinding.ActivityNoteAddUpdateBinding
-import com.example.noteappswithroom.helper.DataHelper
+import com.example.noteappswithroom.helper.DateHelper
 import com.example.noteappswithroom.helper.ViewModelFactory
 
 class NoteAddUpdateActivity : AppCompatActivity() {
@@ -91,7 +91,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
                         showToast(getString(R.string.change))
                     } else {
                         note.let { note ->
-                            note?.date = DataHelper.getCurrentDate()
+                            note?.date = DateHelper.getCurrentDate()
                         }
                         noteAddUpdateViewModel.insert(note as Note)
                         showToast(getString(R.string.added))

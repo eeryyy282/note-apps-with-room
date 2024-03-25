@@ -9,8 +9,9 @@ import com.example.noteappswithroom.database.Note
 import com.example.noteappswithroom.databinding.ItemNoteBinding
 import com.example.noteappswithroom.helper.NoteDiffCallback
 import com.example.noteappswithroom.ui.insert.NoteAddUpdateActivity
+import com.example.noteappswithroom.ui.main.NoteAdapter.NoteViewHolder
 
-class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+class NoteAdapter : RecyclerView.Adapter<NoteViewHolder>() {
 
     private val listNotes = ArrayList<Note>()
 

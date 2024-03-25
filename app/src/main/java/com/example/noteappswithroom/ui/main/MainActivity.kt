@@ -59,6 +59,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun obtainViewModel(activity: AppCompatActivity): MainActivityViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory).get(MainActivityViewModel::class.java)
+        return ViewModelProvider(activity, factory)[MainActivityViewModel::class.java]
     }
 }
